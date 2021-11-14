@@ -2,9 +2,15 @@
   "name": "time-tracker",
   "version": "0.0.0",
   "scripts": {
-    "npm": "npm",
-    "start": "ng serve",
-    "build": "ng build TimeTracker -c production"
+    "npm": "npx",
+    "start": "nx serve",
+    "build": "npx nx build TimeTracker -c production"
+  },
+  "serve": {
+    "options": {
+    "port": 8080,
+    "host": "0.0.0.0"
+    }
   },
   "private": true,
   "dependencies": {
