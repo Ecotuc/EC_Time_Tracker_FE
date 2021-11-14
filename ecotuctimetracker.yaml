@@ -10,7 +10,7 @@ databases:
 name: ecotuctimetracker
 region: nyc
 services:
-  - build_command: ng build TimeTracker
+  - build_command: npm run build
     environment_slug: node-js
     envs:
       - key: DATABASE_URL
