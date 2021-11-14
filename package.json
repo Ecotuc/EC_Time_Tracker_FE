@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "npm",
     "start": "ng serve",
-    "build": "ng build TimeTracker"
+    "build": "ng build TimeTracker -c production"
   },
   "private": true,
   "dependencies": {
