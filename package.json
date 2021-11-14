@@ -2,7 +2,7 @@
   "name": "time-tracker",
   "version": "0.0.0",
   "scripts": {
-    "ng": "npm",
+    "npm": "npm",
     "start": "ng serve",
     "build": "ng build TimeTracker -c production"
   },
