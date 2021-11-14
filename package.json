@@ -4,14 +4,14 @@
   "scripts": {
     "npm": "npx",
     "start": "ng serve",
-    "build": "npx build TimeTracker -c production"
+    "build": "ng build TimeTracker -c production"
   },
   "serve": {
     "options": {
     "port": 8080,
     "host": "0.0.0.0"
     }
-  },
+    },
   "private": true,
   "dependencies": {
     "-": "0.0.1",
