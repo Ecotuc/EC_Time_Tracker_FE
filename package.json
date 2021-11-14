@@ -2,11 +2,9 @@
   "name": "time-tracker",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
+    "ng": "npm",
     "start": "ng serve",
-    "build": "ng build TimeTracker -c production",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build": "ng build TimeTracker"
   },
   "private": true,
   "dependencies": {

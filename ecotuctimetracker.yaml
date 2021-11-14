@@ -1,0 +1,30 @@
+alerts:
+  - rule: DEPLOYMENT_FAILED
+  - rule: DOMAIN_FAILED
+databases:
+  - cluster_name: timetracker
+    engine: PG
+    name: timetracker
+    production: true
+    version: "13"
+name: ecotuctimetracker
+region: nyc
+services:
+  - build_command: ng build TimeTracker
+    environment_slug: node-js
+    envs:
+      - key: DATABASE_URL
+        scope: RUN_TIME
+        value: ${timetracker.DATABASE_URL}
+    github:
+      branch: master
+      deploy_on_push: true
+      repo: Ecotuc/EC_Time_Tracker_FE
+    http_port: 8080
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    name: ecotuctimetracker
+    routes:
+      - path: /
+    run_command: ng serve
+    source_dir: /
