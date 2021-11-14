@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "npm": "npx",
-    "start": "nx serve",
+    "start": "ng serve",
     "build": "npx nx build TimeTracker -c production"
   },
   "serve": {
