@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>{{title}}</h2>
+<mat-dialog-content>
+    <form [formGroup]="form">
+        <div class="col-2">      
+          <mat-form-field class="control-50">
+              <mat-label>Project</mat-label>
+              <mat-select formControlName="project">
+                  <mat-option *ngFor="let project of projectList" [value]="project.id">{{project.name}}</mat-option>
+              </mat-select>
+          </mat-form-field>
+          <mat-form-field class="control-50">
+            <mat-label>Task Category</mat-label>
+            <mat-select formControlName="task_category">
+                <mat-option *ngFor="let project of categoryList" [value]="project.id">{{project.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        </div>
+        <div class="col-2">
+          <mat-form-field class="control-50">
+              <mat-label>Task Description</mat-label>
+              <mat-select formControlName="task_description">
+                  <mat-option *ngFor="let project of descriptionList" [value]="project.id">{{project.name}}</mat-option>
+              </mat-select>
+          </mat-form-field>
+          <mat-form-field class="control-50">
+            <mat-label>Hours</mat-label>
+            <input matInput placeholder="Enter the amount of hours" formControlName="hours">
+        </mat-form-field>
+        </div>
+        <mat-form-field class="control">
+          <mat-label>Description</mat-label>
+          <input matInput placeholder="Enter the description of your work" formControlName="info">
+      </mat-form-field>
+        <button mat-raised-button color="primary">Register Time</button>
+    </form>
+</mat-dialog-content>

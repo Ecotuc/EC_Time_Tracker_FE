@@ -1,0 +1,12 @@
+<div id="month-container"> 
+    <div class="days">
+            <div class="day">Sun</div>
+            <div class="day">Mon</div>
+            <div class="day">Tue</div>
+            <div class="day">Wed</div>
+            <div class="day">Thu</div>
+            <div class="day">Fri</div>
+            <div class="day">Sat</div>
+    </div>
+    <app-day [current-month]="month" [current-year]="year" [day-number]="day.day" [day-hours]="day.hours" *ngFor="let day of monthDays"></app-day>
+</div>

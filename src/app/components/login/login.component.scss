@@ -1,0 +1,35 @@
+.control-style {
+    width: 400px;
+    margin: 0px 50px 0px 50px;
+}
+.tarjeta {
+    width: 500px;
+    height: 300px;
+    margin: 200px auto;
+}
+
+.botonera {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#ingresar {
+    width: 100px;
+}
+
+.mat-card-header{
+    background-color: #4652B1 !important;
+    padding:10px !important;
+    margin: 0px 0px 30px 0px;
+    color: #FFF;
+  }
+  
+.mat-card{
+    padding:0 !important;
+  }
+  
+  .mat-card-content{
+    padding:5px !important;
+  }

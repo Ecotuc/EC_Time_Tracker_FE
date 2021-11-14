@@ -1,0 +1,67 @@
+.container {
+    width : 275px;
+    height : 300px;
+  background-color: beige;
+}
+
+#information {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#project {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+#hours-worked {
+    width: calc(100%);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--usual);
+    font-size: 15px;
+}
+
+#graph {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-title {
+    width: 100%;
+    padding: 4px;
+    margin-top: 50px;
+    flex-direction: column;
+    font-family: var(--usual);
+    font-size: 20px;
+    text-align: center;
+}
+.box-content {
+    width:100%;
+    height: 100px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: center;
+    flex-direction: column;
+    font-family: var(--usual);
+    font-size: 18px;
+}
+
+#hoursData {
+    font-size: 50px;
+    align-self: center;
+    margin: auto 0px auto 0px;
+}
+
+.control {
+    font-size: 18px;
+    align-self: center;
+    margin: 5px;
+    width: calc(50% - 10px);
+}

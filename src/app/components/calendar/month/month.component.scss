@@ -1,0 +1,19 @@
+#month-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: calc(7 * var(--date-width));
+}
+
+.days {
+    display: flex;
+    flex-direction: rows;
+    width: calc(7 * var(--date-width));
+    .day {
+        font-family: var(--usual);
+        font-size: 10px;
+        text-align: center;
+        width: var(--date-width);
+        height: var(--date-width);
+    }
+}

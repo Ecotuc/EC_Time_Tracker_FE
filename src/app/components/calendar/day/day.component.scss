@@ -1,0 +1,30 @@
+#day-container {
+    width: var(--date-width);
+    height: var(--date-height);
+    display: flex;
+    flex-direction: column;
+    text-align: center ;
+    align-items: stretch;
+    background-color: #FFFFFF;
+}
+#empty-container {
+    width: var(--date-width);
+    height: var(--date-height);
+}
+#day-container:hover {
+    background-color: rgb(237, 252, 26);
+}
+
+#day_num {
+    font-family: var(--usual);
+    font-size: 10px;
+    margin-top:7px
+}
+
+.day_selected {
+    background-color: var(--baires-blue);
+    border-radius: 54px;
+    height: var(--date-height);
+    width: var(--date-height);
+    color: #fff;
+}

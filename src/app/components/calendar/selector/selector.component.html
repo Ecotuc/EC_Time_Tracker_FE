@@ -1,0 +1,21 @@
+<div id="calendarContainer">
+    <div id="calendar-move" [formGroup]="form">
+            <div *ngIf="showMonthText" (click)="editMonth()">&nbsp;&nbsp;&nbsp;&nbsp;{{monthNames[month].name}}&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div *ngIf="!showMonthText">
+                <mat-form-field class="dropdown">
+                    <mat-select formControlName="month" (ngModelChange)="selectNewMonth($event)">
+                        <mat-option *ngFor="let monthElement of monthNames" [value]="monthElement.id">{{monthElement.name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div *ngIf="showYearText" (click)="editYear()"> &nbsp;&nbsp;&nbsp;&nbsp;{{year}}&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div *ngIf="!showYearText"> &nbsp;&nbsp;&nbsp;&nbsp;
+                <mat-form-field class="dropdown" style="width:100px">
+                    <mat-select formControlName="year" (ngModelChange)="selectNewYear($event)">
+                        <mat-option *ngFor="let yearElement of yearList" [value]="yearElement.id">{{yearElement.name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+    </div>
+    <app-month [month-number]="(month + 1)"  [month-year]="year"></app-month>
+</div>

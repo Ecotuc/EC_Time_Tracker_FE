@@ -1,0 +1,24 @@
+.table-style {
+    width: 100%;
+}
+
+.tableHeader {
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+}
+
+.control {
+    width: 100%;
+}
+
+.control-50 {
+    width: 49%;
+    margin: 5px 0 5px 0;
+}
+
+.col-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

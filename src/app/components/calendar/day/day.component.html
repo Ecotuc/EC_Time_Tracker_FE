@@ -1,0 +1,4 @@
+<div id="day-container" (click)="saveDate()" *ngIf="dayNumber !== 0" > <!-- [ngStyle]="{'background-color': bgColor}"-->
+    <div class="day_num" [ngClass]="appearence" *ngIf="dayNumber !== 0">{{dayNumber}}</div>
+</div>
+<div id="empty-container" *ngIf="dayNumber === 0">  </div>

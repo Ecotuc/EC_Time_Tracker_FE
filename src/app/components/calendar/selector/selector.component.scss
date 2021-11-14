@@ -1,0 +1,26 @@
+#calendarContainer {
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    font-family: var(--usual);
+    font-size: 10px;
+}
+#calendar-move {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 50px;
+    font-family: var(--usual);
+    font-size: 10px;
+}
+
+#calendar-move div {
+    font-size: 20px;
+}
+
+.dropdown {
+    top: -30px;
+    font-size: 18px;
+    height: 15px;
+}

@@ -1,0 +1,22 @@
+<div class="container">
+    <!--<mat-card-content> [formGroup]="formGroup"> -->
+         <!--
+        <mat-form-field class="control">
+            <mat-label>Project</mat-label>
+            <mat-select  formControlName="project" (ngModelChange)="changeProject($event)">
+                <mat-option *ngFor="let project of projectList" [value]="project.id">{{project.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="control">
+            <mat-label>Focal Point</mat-label>
+            <mat-select formControlName="focusPoint" (ngModelChange)="changeFocal($event)">
+                <mat-option *ngFor="let data of focalList" [value]="data.id">{{data.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    -->
+        <div id="hours-worked">
+            <div class="box-title">Hours Worked / Expected</div>
+            <div class="box-content"> <div id="hoursData">{{hoursWorked}} / {{hoursExpected}}</div></div>
+        </div>
+   <!-- </mat-card-content>>-->
+</div>

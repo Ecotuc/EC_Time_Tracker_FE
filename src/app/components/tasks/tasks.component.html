@@ -1,0 +1,103 @@
+<mat-card class="container">
+    <mat-card-header>
+      <mat-card-title>
+        Tasks for {{dateSelected}}
+      <div id="floatingButton">
+      </div>
+    </mat-card-title>
+    <div>
+      <button mat-raised-button color="primary" (click)="addNewTask()">
+        Add new task
+      </button>&nbsp;&nbsp;
+      <button mat-raised-button color="primary">
+        Copy Full Day
+      </button>
+    </div>
+    </mat-card-header>
+    <mat-card-content style="display:flex; flex-direction: column; justify-content: center;">
+      <br/><br/>
+      <table [formGroup]="formGroup">
+        <tr>
+          <th class="hours">Hours</th>
+          <th class="category">Category</th>
+          <th class="description">Description</th>
+          <th class="comments">Comments</th>
+          <th class="project">Project</th>
+          <th class="focalPoint">Focal Point</th>
+          <th class="add">Add Task</th>
+          <th class="delete">Delete</th>
+          <th class="edit">Edit</th>
+        </tr>
+        <tr *ngFor="let data of tasks">
+          <!--Hours-->
+          <td class="hours" *ngIf="!edit || data.id != id">{{data.hours}}</td> 
+          <td *ngIf="edit && data.id == id">
+            <mat-form-field class="control-small">
+              <mat-label>Hours</mat-label>
+              <input matInput  formControlName="hours" [value]="data.hours">
+            </mat-form-field>
+          </td>
+          <!--Category-->
+          <td class="category" *ngIf="!edit || data.id != id">{{data.category_text}}</td>
+          <td *ngIf="edit && data.id == id">
+            <mat-form-field class="control-medium">
+              <mat-label>Category</mat-label>
+              <mat-select  formControlName="category" (ngModelChange)="changeCategory($event)">
+                  <mat-option *ngFor="let category of categoryList" [value]="category.id">{{category.category_name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+          <!--Description-->
+          <td class="description" *ngIf="!edit || data.id != id">{{data.description_text}}</td>
+          <td *ngIf="edit && data.id == id">
+            <mat-form-field class="control-medium">
+              <mat-label>Description</mat-label>
+              <mat-select  formControlName="description"> <!--(ngModelChange)="changeProject($event)">-->
+                  <mat-option *ngFor="let description of descriptionList" [value]="description.id">{{description.description_name}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+          <!--Comments-->
+          <td class="comments" *ngIf="!edit || data.id != id">{{data.comments}}</td>
+          <td *ngIf="edit && data.id == id">
+            <mat-form-field class="control-50">
+              <mat-label>Comments</mat-label>
+              <input matInput class="control-big" formControlName="comments" [value]="data.comments">
+            </mat-form-field>
+          </td>
+          <!--Project-->
+          <td class="project" *ngIf="!edit || data.id != id">{{data.project_text}}</td>
+          <td *ngIf="edit && data.id == id">
+              <mat-form-field class="control-medium">
+                <mat-label>Project</mat-label>
+                <mat-select  formControlName="project" (ngModelChange)="changeProject($event)">
+                    <mat-option *ngFor="let project of projectList" [value]="project.id">{{project.name}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+          </td>
+          <!--Focal Point-->
+          <td class="focalPoint" *ngIf="!edit || data.id != id">{{data.focal_point_text}}</td>
+          <td *ngIf="edit && data.id == id">
+            <mat-form-field class="control-medium">
+              <mat-label>Focal Point</mat-label>
+              <mat-select formControlName="focusPoint">
+                  <mat-option *ngFor="let data of focalList" [value]="data.id">{{data.name}}</mat-option>
+              </mat-select>
+          </mat-form-field>
+          </td>
+          <!--Add-->
+          <td class="add">
+            <mat-icon aria-hidden="false" style="cursor:pointer;font-size: 15px" (click)="copyTask(data)">add_circle</mat-icon> 
+          </td>
+          <!--Delete-->
+          <td class="delete"><mat-icon aria-hidden="false" style="cursor:pointer;font-size: 15px" (click)="deleteTask(data)">delete</mat-icon> </td>
+          <!--Edit/Save-->
+          <td class="edit" *ngIf="!edit || data.id != id"><mat-icon aria-hidden="false" style="cursor:pointer; font-size: 15px" (click)="editTask(data)">mode_edit</mat-icon> </td>
+          <td class="edit" *ngIf="edit && data.id == id"><mat-icon aria-hidden="false" style="cursor:pointer; font-size: 15px" (click)="saveTask(data)">save</mat-icon> </td>
+          
+        </tr>
+      </table>
+      <div class="bottom"><div id="title">Total Hours</div><div id="total-hours" [style.color]="totalHours > 9 ? '#F00': '#000'">{{totalHours}} hours</div></div>
+    </mat-card-content>
+    
+</mat-card>

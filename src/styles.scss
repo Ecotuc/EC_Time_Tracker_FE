@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --input: input-sans-narrow, sans-serif;
+    --usual: usual, sans-serif;
+    --width: 1200px;
+    --soft-white: #fafafa;
+    --pale-white: #f3f3f3;
+    --baires-blue: #086dad;
+    --baires-dark-blue: #033e5f;
+    --pale-grey: #ababab;
+    --date-width: 35px;
+    --date-height: 25px;
+}
+html, body { height: 100%; }
+body {
+    border: none;
+    margin: 0;
+    background-color: #e0e0e0;
+    background-image: url(assets/images/bg_leaves.jpg);
+    background-color: var(--pale-white);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+a:hover{
+ color: var(--baires-dark-blue);
+
+}
+
+.body_content {
+    width: var(--width);
+    height: 65vh;
+    /* outline: 1px red solid; */
+    margin: auto;
+    /* margin-top: 100px; */
+    border-radius: 5px;
+    display: flex;
+    /* background-color: var(--soft-white); */
+    justify-content: space-between;
+}
+
+.select_holder {
+}
+
+.select_element {
+    padding: 20px 60px;
+    border: none;
+    background-color: antiquewhite;
+    border-radius: 7px;
+    font-family: var(--input);
+    text-transform: uppercase;
+    font-size: 20px;
+}

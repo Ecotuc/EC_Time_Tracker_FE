@@ -1,0 +1,24 @@
+<div *ngIf="user.id != 0">
+<div class="header">
+    <div class="logo_holder" style="background-image: url(assets/images/baires_logo_small.png)"></div>
+    <div class="user_info_holder">
+        <div class="info_holder">
+            <div class="info_name">{{user.user_name}}</div>
+            <div class="info_title">{{user.position}} | {{user.employeeid}}</div>
+        </div>
+        <div class="menuData">
+            <div class="circle_holder" style="background-image: url(assets/images/{{user.icon}})" [matMenuTriggerFor]="menu"></div>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>Export to Excel</button>
+                <button mat-menu-item>Import from Excel</button>
+                <button mat-menu-item>Generate monthly report</button>
+                <hr/>
+                <button mat-menu-item (click)="logout()">Logout</button>
+              </mat-menu>
+        </div>
+    </div>
+</div>
+<div class="quote_holder">
+    <h1>{{quote.quote}} {{quote.author}}</h1>
+</div>
+</div>

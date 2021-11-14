@@ -1,0 +1,91 @@
+.container {
+  width: 800px;
+  height: 65vh;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.table-style {
+    width: 100%;
+}
+
+#floatingButton {
+    width: 50%;
+}
+
+mat-card-header {
+  width:  100%;
+  display: flex;
+  flex-direction: rows;
+  justify-content: space-between;
+}
+
+.hours {
+  text-align: center;
+}
+.category {
+  text-align: center;
+}
+.description {
+  text-align: center;
+}
+.comments {
+  text-align: center;
+}
+.project {
+  text-align: center;
+}
+.focalPoint {
+  text-align: center;
+}
+.add {
+  text-align: center;
+}
+.delete {
+  text-align: center;
+}
+.edit {
+  text-align: center;
+}
+
+.control-small {
+  width: 30px;
+}
+
+.control-medium {
+  width: 70px;
+}
+
+.control-big {
+  width: 120px;
+}
+
+table {
+  font-family: var(--usual);
+  font-size: 10px;
+}
+
+#title {
+  font-family: var(--usual);
+  font-size: 20px;
+}
+
+#total-hours {
+  font-family: var(--usual);
+  font-size: 20px;
+}
+
+.bottom {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0px;
+}
+
+tr:hover {
+  background-color: rgb(236, 227, 227);
+}
