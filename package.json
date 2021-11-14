@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --PROD",
+    "build": "ng build TimeTracker -c production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
