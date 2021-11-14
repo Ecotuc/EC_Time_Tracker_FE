@@ -4,7 +4,7 @@
   "scripts": {
     "npm": "npx",
     "start": "ng serve",
-    "build": "npx nx build TimeTracker -c production"
+    "build": "npx build TimeTracker -c production"
   },
   "serve": {
     "options": {
